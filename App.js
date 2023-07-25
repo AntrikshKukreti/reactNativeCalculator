@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect } from "react";
 import {
   StyleSheet,
@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export default function App() {
   const [value, setValue] = useState("");
@@ -67,7 +68,8 @@ export default function App() {
           </TouchableOpacity>
           <TouchableOpacity onPress={() => back()}>
           <View style={[styles.calcbutton, styles.action]}>
-            <Text style={styles.calcnumberSpecial}>&lt;</Text>
+          <Icon name="backspace" size={20} color="black" />
+            {/* <Text style={styles.calcnumberSpecial}>&lt;</Text> */}
           </View>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => valueCalc('%')}>
